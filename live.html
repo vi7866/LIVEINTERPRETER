@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<title >Live.HTML</title>
+<h1>HTML LIVE</h1>
+
+
+<style>
+
+#p1{
+background: grey;
+color: white;
+border:5px solid green;
+position:absolute;
+top:5%;
+right:0.5%;
+left:0.5%;
+bottom:0.5%;
+vertical-align: middle;
+padding-top:.1%;
+padding-bottom: .09%;
+overflow-y:auto;
+overflow-x:auto;
+}
+
+#t{
+position:absolute;
+top:55%;
+left:.5%;
+right:.5%;
+bottom:.5%;
+}
+
+
+</style>
+
+<script>
+
+y=document.documentElement.clientHeight;
+x=document.documentElement.clientWidth;
+
+function required(){
+document.getElementById("p1").style.height =.4 * y + "px";
+document.getElementById("p1").style.width = .985*x-20 + "px";
+document.getElementById("p1").style.fontSize = .03 * y + "px";
+
+
+document.getElementById("t").style.height = .450 * y -20 +"px";
+document.getElementById("t").style.width = .99*x-20 + "px";
+document.getElementById("t").style.fontSize = .03 * y + "px";
+
+} 
+
+function live()
+{
+x1=document.getElementById("p1");
+y1=document.getElementById("t");
+x1.innerHTML=y1.value;
+}
+</script>
+</head>
+
+
+<body onload="required()"  style="background:#e1e1e1;">
+<p id="p1">code output show here!</p>
+enter your html code here:<textarea id="t"  placeholder="type your code here!" onkeyup="live()"></textarea><br />
+</body>
+
+</html>
